@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Simple Interest Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="vue-app">
+      <div class="container">
+        <form id="form">
+          <div class="header">
+            <h1>Simple Interest Calculator</h1>
+            <p>Simple Interest Formula</p>
+            <p>A = (P*R*T) / 100</p>
+          </div>
+          <p>
+            <input
+              type="number"
+              placeholder="Principal Amount"
+              name="principal"
+              v-model="principal"
+            />
+          </p>
+          <p>
+            <input
+              type="number"
+              placeholder="Annual Rate"
+              name="rate"
+              v-model="rate"
+            />
+          </p>
+          <p>
+            <input
+              type="number"
+              placeholder="Time(years)"
+              name="time"
+              v-model="time"
+            />
+          </p>
+          <div>
+            <button name="submit" type="submit" v-on:click="reset">
+              Reset
+            </button>
+          </div>
+          <div>
+            <p>
+              <button name="submit" type="submit" v-on:click="calculate">
+                Calculate
+              </button>
+            </p>
+          </div>
+
+          <div id="output">simple Interest: #{{ simpleInterest }}</div>
+          <div id="output">Total Amount: #{{ payBackAmount }}</div>
+          <p class="copyright">
+            Designed by
+            <a href="http://twitter.com/abonyi_xavier" target=" _blank"
+              >AbonyiXavier</a
+            >
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
