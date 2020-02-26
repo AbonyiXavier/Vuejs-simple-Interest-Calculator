@@ -49,16 +49,18 @@
               Reset
             </button>
           </div>
-          <div>
+          <!-- <div>
             <p>
               <button name="submit" type="submit" v-on:click="calculate">
                 Calculate
               </button>
             </p>
-          </div>
+          </div> -->
 
-          <div id="output">simple Interest: #{{ simpleInterest }}</div>
-          <div id="output">Total Amount: #{{ payBackAmount }}</div>
+          <div id="output">
+            simple Interest: #{{ simpleInterest() }}
+          </div>
+          <!-- <div id="output">Total Amount: #{{ payBackAmount }}</div> -->
           <p class="copyright">
             Designed by
             <a href="http://twitter.com/abonyi_xavier" target=" _blank"
